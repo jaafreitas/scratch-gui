@@ -196,17 +196,25 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
   if (false) {}
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
-  simulateScratchDesktop ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
+  // jaafreitas: This code shouldn't be merged into production branch
+  // simulateScratchDesktop ?
+  //     <WrappedGui
+  //         isScratchDesktop
+  //         showTelemetryModal
+  //         canSave={false}
+  //         onTelemetryModalCancel={handleTelemetryModalCancel}
+  //         onTelemetryModalOptIn={handleTelemetryModalOptIn}
+  //         onTelemetryModalOptOut={handleTelemetryModalOptOut}
+  //     /> :
+  //     <WrappedGui
+  //         backpackVisible
+  //         showComingSoon
+  //         backpackHost={backpackHost}
+  //         canSave={false}
+  //         onClickLogo={onClickLogo}
+  //     />,
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
     isScratchDesktop: true,
-    showTelemetryModal: true,
-    canSave: false,
-    onTelemetryModalCancel: handleTelemetryModalCancel,
-    onTelemetryModalOptIn: handleTelemetryModalOptIn,
-    onTelemetryModalOptOut: handleTelemetryModalOptOut
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
-    backpackVisible: true,
-    showComingSoon: true,
-    backpackHost: backpackHost,
     canSave: false,
     onClickLogo: onClickLogo
   }), appTarget);
