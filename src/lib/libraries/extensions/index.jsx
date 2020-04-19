@@ -1,6 +1,9 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
+import scientificModellingIconURL from './scientificModelling/scientific-modelling.png';
+import scientificModellingInsetIconURL from './scientificModelling/scientific-modelling-small.png';
+
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -47,6 +50,27 @@ import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Scientific Modelling"
+                description="Name for the 'Scientific Modelling' extension"
+                id="gui.extension.scientificmodelling.name"
+            />
+        ),
+        extensionId: 'scientificModelling',
+        iconURL: scientificModellingIconURL,
+        insetIconURL: scientificModellingInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Play with Scientific Modelling."
+                description="Description for the 'Scientific Modelling extension"
+                id="gui.extension.scientificmodelling.description"
+            />
+        ),
+        featured: true,
+        disabled: false
+    },
     {
         name: (
             <FormattedMessage
