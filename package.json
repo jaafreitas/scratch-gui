@@ -142,6 +142,6 @@
     }
   },
   "dependencies": {
-    "scratch-vm": "github:jaafreitas/scratch-vm#dataviewer"
+    "scratch-vm": "github:jaafreitas/scratch-vm#jaafreitas"
   }
 }

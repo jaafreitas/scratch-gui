@@ -4,6 +4,9 @@ import {FormattedMessage} from 'react-intl';
 import dataviewerIconURL from './dataviewer/dataviewer.png';
 import dataviewerInsetIconURL from './dataviewer/dataviewer-small.svg';
 
+import scientificModellingIconURL from './scientificModelling/scientific-modelling.png';
+import scientificModellingInsetIconURL from './scientificModelling/scientific-modelling-small.png';
+
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -67,6 +70,27 @@ export default [
                 defaultMessage="Play with your data."
                 description="Description for the 'Data Viewer' extension"
                 id="gui.extension.dataviewer.description"
+            />
+        ),
+        featured: true,
+        disabled: false
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Scientific Modelling"
+                description="Name for the 'Scientific Modelling' extension"
+                id="gui.extension.scientificmodelling.name"
+            />
+        ),
+        extensionId: 'scientificModelling',
+        iconURL: scientificModellingIconURL,
+        insetIconURL: scientificModellingInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Play with Scientific Modelling."
+                description="Description for the 'Scientific Modelling extension"
+                id="gui.extension.scientificmodelling.description"
             />
         ),
         featured: true,
