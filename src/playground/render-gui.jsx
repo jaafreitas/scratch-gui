@@ -63,15 +63,17 @@ export default appTarget => {
 
     ReactDOM.render(
         // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
-        simulateScratchDesktop ?
+	    // jaafreitas: This code shouldn't be merged into production branch
+        // simulateScratchDesktop ?
+        true ?
             <WrappedGui
                 canEditTitle
                 isScratchDesktop
-                showTelemetryModal
+                // showTelemetryModal
                 canSave={false}
-                onTelemetryModalCancel={handleTelemetryModalCancel}
-                onTelemetryModalOptIn={handleTelemetryModalOptIn}
-                onTelemetryModalOptOut={handleTelemetryModalOptOut}
+                // onTelemetryModalCancel={handleTelemetryModalCancel}
+                // onTelemetryModalOptIn={handleTelemetryModalOptIn}
+                // onTelemetryModalOptOut={handleTelemetryModalOptOut}
             /> :
             <WrappedGui
                 canEditTitle
