@@ -17,17 +17,28 @@
                 "rotationCenterY": 10.125
             }
         ],
-        "sounds": [
+        "sounds": [],
+        "blocks": {}
+    },
+    {
+        "name": "Square",
+        "tags": [
+            "dataviewer"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
             {
-                "assetId": "0cfa8e84d6a5cd63afa31d541625a9ef",
-                "name": "A Elec Piano",
-                "dataFormat": "wav",
-                "format": "",
-                "rate": 48000,
-                "sampleCount": 96000,
-                "md5ext": "0cfa8e84d6a5cd63afa31d541625a9ef.wav"
+                "assetId": "ec4e4ed55245f3db9ecabeffe7aec490",
+                "name": "green square",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "ec4e4ed55245f3db9ecabeffe7aec490.svg",
+                "rotationCenterX": 9.9,
+                "rotationCenterY": 9.9
             }
         ],
+        "sounds": [],
         "blocks": {}
     },
     {

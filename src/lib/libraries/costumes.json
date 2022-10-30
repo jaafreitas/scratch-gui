@@ -12,6 +12,18 @@
         "rotationCenterY": 10.125
     },
     {
+        "name": "Green Square",
+        "tags": [
+            "dataviewer"
+        ],
+        "assetId": "ec4e4ed55245f3db9ecabeffe7aec490",
+        "bitmapResolution": 1,
+        "dataFormat": "svg",
+        "md5ext": "ec4e4ed55245f3db9ecabeffe7aec490.svg",
+        "rotationCenterX": 0,
+        "rotationCenterY": 0
+    },
+    {
         "name": "Abby-a",
         "tags": [
             "people",
