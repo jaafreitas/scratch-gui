@@ -53,8 +53,8 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="Data Viewer"
-                description="Name for the 'Data Viewer' extension"
+                defaultMessage="PlayData"
+                description="Name for the 'PlayData' extension"
                 id="gui.extension.dataviewer.name"
             />
         ),
@@ -65,7 +65,7 @@ export default [
         description: (
             <FormattedMessage
                 defaultMessage="Play with your data."
-                description="Description for the 'Data Viewer' extension"
+                description="Description for the 'PlayData' extension"
                 id="gui.extension.dataviewer.description"
             />
         ),
