@@ -19,7 +19,7 @@ import largeStageIcon from './icon--large-stage.svg';
 import smallStageIcon from './icon--small-stage.svg';
 import unFullScreenIcon from './icon--unfullscreen.svg';
 
-import scratchLogo from '../menu-bar/scratch-logo.svg';
+import playdataLogo from '../menu-bar/playdata-logo.png';
 import styles from './stage-header.css';
 
 import {ComingSoonTooltip} from '../coming-soon/coming-soon.jsx';
@@ -91,13 +91,13 @@ const StageHeaderComponent = function (props) {
         const stageButton = showBranding ? (
             <div className={styles.embedScratchLogo}>
                 <a
-                    href="https://scratch.mit.edu"
+                    href="https://jaafreitas.github.io/scratch-dataviewer/"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
                     <img
-                        alt="Scratch"
-                        src={scratchLogo}
+                        alt="PlayData"
+                        src={playdataLogo}
                     />
                 </a>
             </div>

@@ -19,8 +19,8 @@ import closeIcon from '../cards/icon--close.svg';
 
 const messages = defineMessages({
     dataviewer: {
-        defaultMessage: 'Data Viewer',
-        description: 'Name for the Data Viewer extension',
+        defaultMessage: 'PlayData',
+        description: 'Name for the PlayData extension',
         id: 'gui.extension.dataviewer.name'
     },
     index: {
