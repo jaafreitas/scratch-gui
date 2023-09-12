@@ -30,7 +30,7 @@ const messages = defineMessages({
     }
 });
 
-const DataviewerHeader = ({onCloseChart, onShrinkExpandChart, expanded}) => (
+const DataviewerHeader = ({onCloseTable, onShrinkExpandTable, expanded}) => (
     <div className={expanded ? styles.headerButtons : classNames(styles.headerButtons, styles.headerButtonsHidden)}>
         <div
             className={styles.dataviewerButton}
@@ -44,7 +44,7 @@ const DataviewerHeader = ({onCloseChart, onShrinkExpandChart, expanded}) => (
         <div className={styles.headerButtonsRight}>
             <div
                 className={styles.shrinkExpandButton}
-                onClick={onShrinkExpandChart}
+                onClick={onShrinkExpandTable}
             >
                 <img
                     draggable={false}
@@ -65,7 +65,7 @@ const DataviewerHeader = ({onCloseChart, onShrinkExpandChart, expanded}) => (
             </div>
             <div
                 className={styles.removeButton}
-                onClick={onCloseChart}
+                onClick={onCloseTable}
             >
                 <img
                     className={styles.closeIcon}
@@ -82,12 +82,12 @@ const DataviewerHeader = ({onCloseChart, onShrinkExpandChart, expanded}) => (
 );
 
 DataviewerHeader.propTypes = {
-    onCloseChart: PropTypes.func.isRequired,
-    onShrinkExpandChart: PropTypes.func.isRequired,
+    onCloseTable: PropTypes.func.isRequired,
+    onShrinkExpandTable: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired
 };
 
-class DataviewerChart extends React.Component {
+class DataviewerTable extends React.Component {
     constructor (props) {
         super(props);
         bindAll(this, [
@@ -244,7 +244,7 @@ class DataviewerChart extends React.Component {
     }
 }
 
-DataviewerChart.propTypes = {
+DataviewerTable.propTypes = {
     vm: PropTypes.instanceOf(VM).isRequired,
     intl: intlShape.isRequired
 };
@@ -255,8 +255,8 @@ const Dataviewer = props => {
         vm,
         intl,
         isRtl,
-        onCloseChart,
-        onShrinkExpandChart,
+        onCloseTable,
+        onShrinkExpandTable,
         onDrag,
         onStartDrag,
         onEndDrag,
@@ -264,9 +264,9 @@ const Dataviewer = props => {
     } = props;
     let {x, y} = posProps;
 
-    const onCloseChartTimeline = () => {
+    const onCloseTableTimeline = () => {
         vm.emit('closeDataviewerTable*');
-        onCloseChart();
+        onCloseTable();
     };
 
     // Draggable windows need to calculate their own dragging bounds
@@ -311,12 +311,12 @@ const Dataviewer = props => {
                     <div className={styles.chart}>
                         <DataviewerHeader
                             // eslint-disable-next-line react/jsx-no-bind
-                            onCloseChart={onCloseChartTimeline}
-                            onShrinkExpandChart={onShrinkExpandChart}
+                            onCloseTable={onCloseTableTimeline}
+                            onShrinkExpandTable={onShrinkExpandTable}
                             expanded={expanded}
                         />
                         <div className={expanded ? styles.chartBody : styles.hidden}>
-                            <DataviewerChart
+                            <DataviewerTable
                                 vm={vm}
                                 intl={intl}
                             />
@@ -333,8 +333,8 @@ Dataviewer.propTypes = {
     x: PropTypes.number,
     y: PropTypes.number,
     isRtl: PropTypes.bool.isRequired,
-    onCloseChart: PropTypes.func.isRequired,
-    onShrinkExpandChart: PropTypes.func.isRequired,
+    onCloseTable: PropTypes.func.isRequired,
+    onShrinkExpandTable: PropTypes.func.isRequired,
     onDrag: PropTypes.func,
     onStartDrag: PropTypes.func,
     onEndDrag: PropTypes.func,

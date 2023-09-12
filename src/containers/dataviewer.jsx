@@ -2,9 +2,9 @@ import {connect} from 'react-redux';
 import React from 'react';
 
 import {
-    closeChart,
-    shrinkExpandChart,
-    dragChart,
+    closeTable,
+    shrinkExpandTable,
+    dragTable,
     startDrag,
     endDrag
 } from '../reducers/dataviewer';
@@ -24,9 +24,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onCloseChart: () => dispatch(closeChart()),
-    onShrinkExpandChart: () => dispatch(shrinkExpandChart()),
-    onDrag: (e_, data) => dispatch(dragChart(data.x, data.y)),
+    onCloseTable: () => dispatch(closeTable()),
+    onShrinkExpandTable: () => dispatch(shrinkExpandTable()),
+    onDrag: (e_, data) => dispatch(dragTable(data.x, data.y)),
     onStartDrag: () => dispatch(startDrag()),
     onEndDrag: () => dispatch(endDrag())
 });

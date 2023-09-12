@@ -12,7 +12,6 @@ import {getStageDimensions} from '../../lib/screen-utils';
 import {STAGE_SIZE_MODES} from '../../lib/layout-constants';
 
 import dataviewerTableIcon from './icon--table-dataviewer.png';
-import dataviewerChartIcon from './icon--chart-dataviewer.png';
 
 import fullScreenIcon from './icon--fullscreen.svg';
 import largeStageIcon from './icon--large-stage.svg';
@@ -22,18 +21,11 @@ import unFullScreenIcon from './icon--unfullscreen.svg';
 import playdataLogo from '../menu-bar/playdata-logo.png';
 import styles from './stage-header.css';
 
-import {ComingSoonTooltip} from '../coming-soon/coming-soon.jsx';
-
 const messages = defineMessages({
     dataviewerTable: {
-        defaultMessage: 'Dataviewer Table',
-        description: 'Button to Dataviewer Table',
+        defaultMessage: 'PlayData Table',
+        description: 'Button to PlayData Table',
         id: 'gui.stageHeader.dataviewerTable'
-    },
-    dataviewerChart: {
-        defaultMessage: 'Dataviewer Chart',
-        description: 'Button to Dataviewer Chart',
-        id: 'gui.stageHeader.dataviewerChart'
     },
     largeStageSizeMessage: {
         defaultMessage: 'Switch to large stage',
@@ -69,7 +61,6 @@ const StageHeaderComponent = function (props) {
         onKeyPress,
         dataviewerVisible,
         onOpenDataviewerTable,
-        onOpenDataviewerChart,
         onSetStageLarge,
         onSetStageSmall,
         onSetStageFull,
@@ -91,7 +82,7 @@ const StageHeaderComponent = function (props) {
         const stageButton = showBranding ? (
             <div className={styles.embedScratchLogo}>
                 <a
-                    href="https://jaafreitas.github.io/scratch-dataviewer/"
+                    href="https://playdatalab.github.io/"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
@@ -134,7 +125,6 @@ const StageHeaderComponent = function (props) {
                     <Button
                         className={classNames(
                             styles.stageButton,
-                            styles.stageButtonFirst,
                             styles.stageDataviewerButton,
                             dataviewerVisible ? styles.stageDataviewerButtonOff : null
                         )}
@@ -148,28 +138,6 @@ const StageHeaderComponent = function (props) {
                             title={props.intl.formatMessage(messages.dataviewerTable)}
                         />
                     </Button>
-                </div>
-                <div style={{display: 'none'}} >
-                    <ComingSoonTooltip
-                        place="bottom"
-                        tooltipId="dataviewer-chart"
-                    >
-                        <Button
-                            className={classNames(
-                                styles.stageButton,
-                                styles.stageButtonLast,
-                                styles.stageDataviewerButton
-                            )}
-                        >
-                            <img
-                                alt={props.intl.formatMessage(messages.dataviewerChart)}
-                                className={styles.stageDataviewerButtonIcon}
-                                draggable={false}
-                                src={dataviewerChartIcon}
-                                title={props.intl.formatMessage(messages.dataviewerChart)}
-                            />
-                        </Button>
-                    </ComingSoonTooltip>
                 </div>
             </div>
         );
@@ -257,7 +225,6 @@ StageHeaderComponent.propTypes = {
     onKeyPress: PropTypes.func.isRequired,
     dataviewerVisible: PropTypes.bool.isRequired,
     onOpenDataviewerTable: PropTypes.func.isRequired,
-    onOpenDataviewerChart: PropTypes.func.isRequired,
     onSetStageFull: PropTypes.func.isRequired,
     onSetStageLarge: PropTypes.func.isRequired,
     onSetStageSmall: PropTypes.func.isRequired,

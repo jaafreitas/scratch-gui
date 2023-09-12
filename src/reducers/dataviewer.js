@@ -1,7 +1,7 @@
-const VIEW_CHART = 'scratch-gui/dataviewer/VIEW_CHART';
-const CLOSE_CHART = 'scratch-gui/dataviewer/CLOSE_CHART';
-const SHRINK_EXPAND_CHART = 'scratch-gui/dataviewer/SHRINK_EXPAND_CHART';
-const DRAG_CHART = 'scratch-gui/dataviewer/DRAG_CHART';
+const VIEW_TABLE = 'scratch-gui/dataviewer/VIEW_TABLE';
+const CLOSE_TABLE = 'scratch-gui/dataviewer/CLOSE_TABLE';
+const SHRINK_EXPAND_TABLE = 'scratch-gui/dataviewer/SHRINK_EXPAND_TABLE';
+const DRAG_TABLE = 'scratch-gui/dataviewer/DRAG_TABLE';
 const START_DRAG = 'scratch-gui/dataviewer/START_DRAG';
 const END_DRAG = 'scratch-gui/dataviewer/END_DRAG';
 
@@ -16,20 +16,20 @@ const initialState = {
 const reducer = function (state, action) {
     if (typeof state === 'undefined') state = initialState;
     switch (action.type) {
-    case VIEW_CHART:
+    case VIEW_TABLE:
         return Object.assign({}, state, {
             expanded: true,
             visible: true
         });
-    case CLOSE_CHART:
+    case CLOSE_TABLE:
         return Object.assign({}, state, {
             visible: false
         });
-    case SHRINK_EXPAND_CHART:
+    case SHRINK_EXPAND_TABLE:
         return Object.assign({}, state, {
             expanded: !state.expanded
         });
-    case DRAG_CHART:
+    case DRAG_TABLE:
         return Object.assign({}, state, {
             x: action.x,
             y: action.y
@@ -47,20 +47,20 @@ const reducer = function (state, action) {
     }
 };
 
-const viewChart = function () {
-    return {type: VIEW_CHART};
+const viewTable = function () {
+    return {type: VIEW_TABLE};
 };
 
-const closeChart = function () {
-    return {type: CLOSE_CHART};
+const closeTable = function () {
+    return {type: CLOSE_TABLE};
 };
 
-const shrinkExpandChart = function () {
-    return {type: SHRINK_EXPAND_CHART};
+const shrinkExpandTable = function () {
+    return {type: SHRINK_EXPAND_TABLE};
 };
 
-const dragChart = function (x, y) {
-    return {type: DRAG_CHART, x, y};
+const dragTable = function (x, y) {
+    return {type: DRAG_TABLE, x, y};
 };
 
 const startDrag = function () {
@@ -74,10 +74,10 @@ const endDrag = function () {
 export {
     reducer as default,
     initialState as dataviewerInitialState,
-    viewChart,
-    closeChart,
-    shrinkExpandChart,
-    dragChart,
+    viewTable,
+    closeTable,
+    shrinkExpandTable,
+    dragTable,
     startDrag,
     endDrag
 };
