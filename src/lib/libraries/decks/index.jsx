@@ -68,10 +68,10 @@ import spinThumb from './thumbnails/spin.jpg';
 
 export default {
 
-    'dataviewer': {
-        name: 'Create with data',
+    'playdata': {
+        name: 'Create with Data',
         img: libraryDataViewer,
-        tags: ['dataviewer'],
+        tags: ['playdata'],
         steps: [{
             video: 'dataviewer'
         }, {
@@ -94,7 +94,7 @@ export default {
             image: 'dataviewerTryItOut'
         }
         ],
-        urlId: 'dataviewer'
+        urlId: 'playdata'
     },
 
     'intro-move-sayhello': {

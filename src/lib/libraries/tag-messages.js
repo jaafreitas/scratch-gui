@@ -16,10 +16,10 @@ export default defineMessages({
         description: 'Tag for filtering a library for dance',
         id: 'gui.libraryTags.dance'
     },
-    dataviewer: {
-        defaultMessage: 'Dataviewer',
-        description: 'Tag for filtering a library for dataviewer',
-        id: 'gui.libraryTags.dataviewer'
+    playdata: {
+        defaultMessage: 'PlayData',
+        description: 'Tag for filtering a library for PlayData',
+        id: 'gui.libraryTags.playdata'
     },
     effects: {
         defaultMessage: 'Effects',

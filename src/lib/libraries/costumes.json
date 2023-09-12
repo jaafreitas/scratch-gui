@@ -2,7 +2,7 @@
     {
         "name": "Orange Circule",
         "tags": [
-            "dataviewer"
+            "playdata"
         ],
         "assetId": "e7407cad28474be258565105ee66f1e5",
         "bitmapResolution": 1,
@@ -14,7 +14,7 @@
     {
         "name": "Green Square",
         "tags": [
-            "dataviewer"
+            "playdata"
         ],
         "assetId": "ec4e4ed55245f3db9ecabeffe7aec490",
         "bitmapResolution": 1,

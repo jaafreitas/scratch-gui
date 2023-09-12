@@ -1,6 +1,6 @@
 import messages from './tag-messages.js';
 export default [
-    {tag: 'dataviewer', intlLabel: messages.dataviewer},
+    {tag: 'playdata', intlLabel: messages.playdata},
     {tag: 'animation', intlLabel: messages.animation},
     {tag: 'art', intlLabel: messages.art},
     {tag: 'music', intlLabel: messages.music},

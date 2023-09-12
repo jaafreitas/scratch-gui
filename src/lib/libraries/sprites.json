@@ -2,7 +2,7 @@
     {
         "name": "Circle",
         "tags": [
-            "dataviewer"
+            "playdata"
         ],
         "isStage": false,
         "variables": {},
@@ -23,7 +23,7 @@
     {
         "name": "Square",
         "tags": [
-            "dataviewer"
+            "playdata"
         ],
         "isStage": false,
         "variables": {},
