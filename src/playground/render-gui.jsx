@@ -71,9 +71,7 @@ export default appTarget => {
                         .then(response => {
                             if (response.ok) {
                                 return response.arrayBuffer();
-                            } else {
-                                console.error('Failed to fetch project: ' + response.statusText);
-                            }
+                            } console.error(`Failed to fetch project: ${response.statusText}`);
                         })
                         .then(arrayBuffer => {
                             if (arrayBuffer) {
@@ -81,7 +79,7 @@ export default appTarget => {
                                 vm.loadProject(arrayBuffer)
                                     .catch(error => {
                                         projectLoaded = false;
-                                        console.error('Failed to load project. ' + error);
+                                        console.error(`Failed to load project. ${error}`);
                                     });
                             }
                         });

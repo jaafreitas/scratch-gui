@@ -70,7 +70,6 @@ import moveArrowKeysThumb from './thumbnails/move-arrow-keys.jpg';
 import spinThumb from './thumbnails/spin.jpg';
 
 export const CATEGORIES = {
-    playData: 'PlayData',
     gettingStarted: 'gettingStarted',
     basics: 'basics',
     intermediate: 'intermediate',
@@ -81,9 +80,9 @@ export default {
 
     'playdata': {
         name: 'Create with Data',
-        img: libraryDataViewer,
         tags: ['playdata'],
-        category: CATEGORIES.playData,
+        category: CATEGORIES.gettingStarted,
+        img: libraryDataViewer,
         steps: [{
             video: 'dataviewer'
         }, {

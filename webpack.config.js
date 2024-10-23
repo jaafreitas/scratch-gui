@@ -110,7 +110,7 @@ const buildConfig = baseConfig.clone()
     .addPlugin(new HtmlWebpackPlugin({
         chunks: ['gui'],
         template: 'src/playground/index.ejs',
-        title: 'PlayData',
+        title: 'PlayData'
     }))
     .addPlugin(new HtmlWebpackPlugin({
         chunks: ['blocksonly'],
